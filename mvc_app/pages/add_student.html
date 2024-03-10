@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>add student </title>
+</head>
+<body>
+
+      <h1>Add Student Information</h1> <br><br>
+      <a href="/index/">HOME</a><br><br>
+
+      {{result}}<br><br>
+      <form action="/save/" method="post">
+          {% csrf_token %}
+            Student Id : <input type="text" name="id" value="{{student.id}}"> <br><br>
+            Student Name : <input type="text" name="name" value="{{student.name}}"> <br><br>
+            Student Age : <input type="text" name="age" value="{{student.age}}"> <br><br>
+            Student Email : <input type="text" name="email" value="{{student.email}}"> <br><br>
+            Student Fees : <input type="text" name="fees" value="{{student.fees}}"> <br><br>
+            Students Dept : <input type="text" name="dept" value="{{student.dept}}"> <br><br>
+            <input type="submit" name="Save" value="save">
+      </form>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> </title>
+</head>
+<body>
+
+      <h1> Student List.. </h1>
+      <a href="/index/">HOME</a> <br><br>
+
+<!--  {{student_list}}  -->
+    <table border="1">
+        <thead>
+            <th><a href="/sort/id">STUDENT ID</a></th>
+            <th><a href="/sort/name"> STUDENT NAME</a></th>
+            <th><a href="/sort/age">STUDENT AGE</a></th>
+            <th><a href="/sort/email">STUDENT EMAIL</a></th>
+            <th><a href="/sort/fees">STUDENT FEES</a></th>
+            <th><a href="/sort/dept">STUDENT DEPT</a></th>
+            <th>action</th>
+    </thead>
+    <tbody>
+        {% for student in student_list %}
+        <tr>
+            <td>{{student.id}}</td>
+            <td>{{student.name}}</td>
+            <td>{{student.age}}</td>
+            <td>{{student.email}}</td>
+            <td>{{student.fees}}</td>
+            <td>{{student.dept}}</td>
+            <td><a href="/edit/{{student.id}}">EDIT</a>
+                <a href="/delete/{{student.id}}">DELETE</a> </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+
+
+
+</table>
+
+
+
+</body>
+</html>
